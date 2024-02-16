@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Protest+Revolution&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --kk: #fff;
+}
+
+p {
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/desk-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.video_wrap {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.video_wrap iframe {
+    position: absolute;
+    width: 100%;
+    height: calc(100vw/1.77);
+    left: 0;
+    top: 0;
+    mix-blend-mode: lighten;
+
+}
+
+.user-box {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+}
+
+.user-box img {
+    width: 250px;
+    border: 2px solid #6cead5;
+    border-radius: 50%;
+}
+
+.user-box h1 {
+    color: #fff;
+    margin: 10px;
+}
+
+.user-box p {
+    color: #fff;
+}
+
+.waviy-1 p>span {
+    position: relative;
+    display: inline-block;
+    font-size: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i));
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
+
+.scroll-btn {
+    bottom: 30px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    border: 2px solid #fff;
+    padding: 10px 10px 20px;
+    border-radius: 30px;
+
+}
+
+.scroll-bar span {
+    border: 2px solid #fff;
+    font-size: 10px;
+    border-radius: 30px;
+}
+
+.scroll-bar {
+    animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/*------------------about---------------------------*/
+#user-info {
+    background: #f5f5f5;
+}
+
+.about {
+    padding: 100px 0 100px 0;
+}
+
+.profile-img {
+    width: 400px;
+    height: 670px;
+    object-fit: cover;
+}
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar {
+    background: #000;
+}
+
+.navbar ul li a {
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar-brand {
+    font-weight: bold;
+
+}
+
+.waviy h3>span {
+    color: #000;
+}
+
+.waviy {
+
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+    font-size: 30px;
+}
+
+.waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+
+}
+
+@keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-20px)
+    }
+}
+
+/*----------------------about------------------------------------*/
+
+
+.nav-bar .fa-bars {
+    color: #fff;
+    font-size: 35px;
+}
+
+.navbar-toggler {
+    outline: none;
+}
+
+.navbar-nav {
+    float: right;
+    text-align: right;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.skill-bars p {
+    margin-bottom: 6px !important;
+    font-weight: 600;
+}
+
+.progress {
+    border-radius: 16px !important;
+    margin-bottom: 10px !important;
+}
+
+.progress-bar {
+    border-radius: 16px !important;
+    background: #000 !important;
+}
+
+/*---------------------------resume-----------------------------------*/
+.resume {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: #f9f9f9;
+    position: relative;
+    width: 100%;
+}
+
+.resume h3 {
+    margin-bottom: 50px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+}
+
+.resume h3::before {
+    content: "*";
+    display: inline-block;
+}
+
+
+.timeline {
+    position: relative;
+    list-style: none;
+}
+
+.timeline:before {
+    content: "";
+    background: #555;
+    display: inline-block;
+    position: absolute;
+    left: -14px;
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+}
+
+.timeline li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.timeline li h4 {
+    background-color: #000;
+    padding: 5px 0 5px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+.timeline li:before {
+    content: "";
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: -24px;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/*-------------------------service-------------------------------------------*/
+.service {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.service h3 {
+    width: max-content;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+}
+
+.service h3::before {
+    content: "*";
+    display: inline-block;
+}
+
+.service h3::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: 12px;
+
+
+}
+
+.service-box {
+    padding: 23px;
+    margin-top: 20px;
+    background: #14053e;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    aspect-ratio: 3/2;
+    color: #fff;
+
+}
+
+.service-box .fa {
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+.service-box span {
+    margin: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+.service-box p {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #fff;
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+.service-box:hover {
+    color: #fff;
+    background: #000;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+
+.service-box:hover p {
+    color: #fff;
+}
+
+.project img {
+    max-width: 350px;
+    border: 2px solid #565256;
+    background: #565256;
+    padding: 10px;
+    margin-top: 24px;
+}
+
+.project h3 {
+    width: max-content;
+    position: relative;
+    margin: 0 auto;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+}
+
+.project h3::before {
+    content: "*";
+    display: inline-block;
+}
+
+.project h3::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: 12px;
+
+
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+/*--------------------contact------------------------------*/
+.contact {
+    padding-top: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff !important;
+}
+
+.contact .row {
+    padding: 30px 0;
+    font-size: 22px;
+}
+
+.contact .col-md-4 .fa {
+    font-size: 40px;
+    padding: 10px;
+}
+
+.contact .btn {
+    padding: 10px 25px;
+    margin: 5px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background: transparent;
+}
+
+.contact .btn:focus {
+    box-shadow: none !important;
+}
+
+.contact .btn:hover {
+    border: 2px solid #000 !important;
+    background-color: #000;
+    transition: 0.1s;
+}
+
+.contact .btn .fa {
+    margin-right: 10px;
+}
+
+.contact h2 {
+    font-size: 15px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+}
+
+.contact p {
+    font-size: 15px;
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 400;
+}
+
+.contact button a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.contact p a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+@media(max-width:960px) {
+    .project img {
+        max-width: 100%;
+    }
+
+}
+
+@media(max-width:767px) {
+    .waviy {
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:460px) {
+    .project img {
+        max-width: 100%;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
